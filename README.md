@@ -17,6 +17,7 @@ This project serves as the back end for an e-commerce platform. Given the increa
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Demo Video](#demo-video)
 - [Credits](#credits)
 - [License](#license)
 
@@ -50,8 +51,12 @@ You can use tools like Insomnia Core for testing the API endpoints. The API allo
 - Fetch, create, update, and delete Categories, Products, and Tags.
 
 ![E-commerce Back End Demo](./assets/images/13-orm-homework-demo-01.gif)
-![E-commerce Back End Demo](./assets/images/13-orm-homework-demo-02.gif)
-![E-commerce Back End Demo](./assets/images/13-orm-homework-demo-03.gif)
+
+
+## Demo Video
+
+[Watch the Video](https://share.vidyard.com/watch/n8AW5afu4FMXNzW3WxAPu8?)
+
 
 ## Credits
 
@@ -59,7 +64,7 @@ You can use tools like Insomnia Core for testing the API endpoints. The API allo
 - [MySQL2](https://www.npmjs.com/package/mysql2)
 - [Express.js](https://expressjs.com/)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
-- Starter Code: [University of Texas at Austin Coding Bootcamp](https://bootcamp.cvn.utexas.edu/)
+- Starter Code and Usage .gif: [University of Texas at Austin Coding Bootcamp](https://bootcamp.cvn.utexas.edu/)
 - README.md and Commenting Assistance, Automated Code Snippet Creation: [ChatGPT by OpenAI](https://openai.com/research/chatgpt)
 
 ## License
