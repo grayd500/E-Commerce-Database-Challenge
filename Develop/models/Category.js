@@ -1,36 +1,35 @@
-// Import the Model class and DataTypes object from Sequelize
+// Grabbing Sequelize tools
 const { Model, DataTypes } = require('sequelize');
 
-// Import the configured Sequelize instance
+// Bringing in our DB setup
 const sequelize = require('../config/connection.js');
 
-// Create a new model (Category) by extending from the Sequelize Model class
+// Crafting our Category model, inheriting from Sequelize's Model class
 class Category extends Model {}
 
-// Initialize the Category model
+// Setting up the Category model structure
 Category.init(
   {
-    // Define the properties of the Category model
     id: {
-      type: DataTypes.INTEGER, // Integer type
-      allowNull: false,        // This column cannot be NULL
-      primaryKey: true,        // This is a Primary Key
-      autoIncrement: true,     // Auto-increment the value
+      type: DataTypes.INTEGER, // ID, integer, can't be null, auto-increments
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
     category_name: {
-      type: DataTypes.STRING,  // String type
-      allowNull: false,        // This column cannot be NULL
+      type: DataTypes.STRING, // Name of the category, a string, can't be null
+      allowNull: false,
     },
   },
   {
-    // Model configuration options
-    sequelize,                // Attach the sequelize instance
-    timestamps: false,        // Don't create "createdAt" and "updatedAt" fields
-    freezeTableName: true,    // Disable pluralization of table name
-    underscored: true,        // Use underscores instead of camelCase for field names
-    modelName: 'category',    // Set the name of the model
+    sequelize, // Plugging in the DB connection
+    timestamps: false, // No automatic timestamps
+    freezeTableName: true, // Keeps table name as is
+    underscored: true, // Fields in snake_case
+    modelName: 'category', // Name for this model
   }
 );
 
-// Export the Category model so it can be used in other parts of the app
+// Shipping out the Category model to be used elsewhere
 module.exports = Category;
+

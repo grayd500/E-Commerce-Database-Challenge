@@ -1,25 +1,22 @@
-// Import the Express package
+// Grabbing Express for our server
 const express = require('express');
-// Import the routes from the 'routes' folder
+
+// Pulling in our routes
 const routes = require('./routes');
 
-// Initialize an instance of Express
+// Kicking off an Express app
 const app = express();
 
-// Set the port number, either from an environment variable or default to 3001
+// Port: Grab from environment or use 3001
 const PORT = process.env.PORT || 3001;
 
-// Middleware for parsing JSON objects
+// Middlewares handles JSON and URL-encoded data
 app.use(express.json());
-
-// Middleware for parsing URL-encoded payloads
 app.use(express.urlencoded({ extended: true }));
 
-// Middleware to use the imported routes
+// Hooking up routes
 app.use(routes);
 
-// Listen to the server on the set port number
-app.listen(PORT, () => {
-  // Log a message indicating that the server is running
-  console.log(`App listening on port ${PORT}!`);
-});
+// 🏁 Starting the server and logging that it's up and running
+app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
+
